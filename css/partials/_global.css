@@ -22,7 +22,7 @@
     background: var(--gradient-color);
     background-clip: padding-box;
     color: whitesmoke;
-    transition: brackground .6s ease;
+    transition: background .6s ease;
     box-shadow: var(--box-shadow);
 }
 
@@ -33,14 +33,14 @@
 }
 
 .button.primary-button::after,
-.button.button.secondary-button::after {
+.button.secondary-button::after {
     position: absolute;
     top: -2px;
     left: -2px;
     bottom: -2px;
     right: -2px;
     background: var(--gradient-color);
-    content: '';
+    content: ' ';
     z-index: -1;
     border-radius: 4px;
 }
@@ -57,11 +57,22 @@
     box-shadow: var(--box-shadow);
 }
 
-p.para{
+p.para {
     color: var(--text-color);
-    font: normal 500 16px/ 25px var(--roboto); 
+    font: normal 500 16px/ 25px var(--roboto);
 }
 
-.font-roboto{
+.font-roboto {
     font-family: var(--roboto);
+}
+
+button:focus,
+button:active button:hover .btn:active,
+.btn.active {
+    outline: 0px !important;
+    box-shadow: none !important;
+}
+
+.title-h1{
+    font: normal bold 39px/ 40px var(--roboto);
 }
